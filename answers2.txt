@@ -1,0 +1,32 @@
+Q1
+
+After running:
+
+uv add mlflow torch torchvision scikit-learn
+
+pyproject.toml was updated to include these libraries as project dependencies.
+
+uv.lock was also updated with the exact versions of these packages and all of their required dependencies. This makes sure the same environment can be reproduced later with the same package versions.
+
+Q2
+
+Q2
+
+--backend-store-uri tells MLflow where to store experiment metadata such as runs, parameters, metrics, and run information. In this lab it uses a SQLite database:
+
+sqlite:///mlflow.db
+
+--default-artifact-root tells MLflow where to store larger output files produced by runs, such as trained models and other artifacts. In this lab they are stored in:
+
+./mlruns
+
+Metadata describes the experiment and its results, while artifacts are the actual files produced by a run, such as the saved trained model.
+
+Q3
+
+mlflow.db and mlruns/ should not be tracked by Git because they are local outputs created by MLflow, not source code.
+
+They also should not be tracked by DVC because DVC is being used to version the dataset, while MLflow already manages experiment metadata, metrics, and model artifacts.
+
+Tracking them again with Git or DVC would be unnecessary and would create duplicated or constantly changing files.
+

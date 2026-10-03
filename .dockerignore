@@ -1,0 +1,15 @@
+.venv/
+data/
+mlruns/
+mlflow.db
+.git/
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+mlartifacts/

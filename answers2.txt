@@ -10,8 +10,6 @@ uv.lock was also updated with the exact versions of these packages and all of th
 
 Q2
 
-Q2
-
 --backend-store-uri tells MLflow where to store experiment metadata such as runs, parameters, metrics, and run information. In this lab it uses a SQLite database:
 
 sqlite:///mlflow.db

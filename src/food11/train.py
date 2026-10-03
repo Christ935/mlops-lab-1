@@ -332,18 +332,18 @@ with mlflow.start_run():
     # --------------------------------------------------
 
     # --------------------------------------------------
-# Save trained model to MLflow
-# --------------------------------------------------
-input_example = torch.randn(
-    1,
-    3,
-    128,
-    128
-)
+    # Save trained model to MLflow
+    # --------------------------------------------------
+    input_example = torch.randn(
+        1,
+        3,
+        128,
+        128
+    )
 
-mlflow.pytorch.log_model(
-    model,
-    name="model",
-    input_example=input_example,
-    serialization_format="pickle"
-)
+    mlflow.pytorch.log_model(
+        model,
+        name="model",
+        input_example=input_example,
+        serialization_format="pickle"
+    )
